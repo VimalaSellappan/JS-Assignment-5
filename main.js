@@ -44,26 +44,30 @@ function atm(){
     {
         case 1:
             account.getBalance();
+            atm();
             break;
         case 2:
             const deposit_Amount = parseFloat(prompt("Enter the amount to deposit:"));
             account.deposit(deposit_Amount);
+            atm();
             break;
         case 3:
             const withdraw_Amount = parseFloat(prompt("Enter the amount to withdraw:"));
             account.withdrawal(withdraw_Amount);
+            atm();
             break;
         case 4:
             account.getAccountName();
+            atm();
             break;
         case 5:
             alert("Exiting ATM...");
             break;  
         default:
             alert("Invalid option");
+            atm();
             break;
     }
-
 
 }
 atm();
